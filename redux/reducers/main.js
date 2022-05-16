@@ -1,6 +1,6 @@
 import * as t from "../actions/types";
 
-const initialState = {
+export const initialState = {
   name: "guest",
   meals: [],
 };
@@ -18,6 +18,18 @@ const main = (state = initialState, action) => {
         isLoading: true,
       };
     case t.GET_MEALS:
+      return {
+        ...state,
+        meals: action.payload,
+        isLoading: false,
+      };
+    case t.CLEAR_MEALS:
+      return {
+        ...state,
+        meals: [],
+        isLoading: true,
+      };
+    case t.SEARCH_MEAL:
       return {
         ...state,
         meals: action.payload,

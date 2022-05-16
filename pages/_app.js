@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "antd/dist/antd.css";
 import React from "react";
 import { wrapper } from "../redux/store";
 
